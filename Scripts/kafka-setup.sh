@@ -13,7 +13,7 @@ yum install telnet -y
 
 sudo su
 
-wget http://ftp.wayne.edu/apache/kafka/$KAFKA_VERSION/$KAFKA_PRE$KAFKA_VERSION.tgz
+wget https://archive.apache.org/dist/kafka/$KAFKA_VERSION/$KAFKA_PRE$KAFKA_VERSION.tgz
 tar -xvf $KAFKA_PRE$KAFKA_VERSION.tgz
 cd $KAFKA_PRE$KAFKA_VERSION/config/
 
@@ -21,7 +21,7 @@ sed -i '34s/#//' server.properties
 
 cd ../../
 
-wget http://apache.cs.utah.edu/zookeeper/zookeeper-$ZOO_VERSION/zookeeper-$ZOO_VERSION.tar.gz
+wget https://archive.apache.org/dist/zookeeper/zookeeper-$ZOO_VERSION/zookeeper-$ZOO_VERSION.tar.gz
 tar -xvf zookeeper-$ZOO_VERSION.tar.gz
 cp zookeeper-$ZOO_VERSION/conf/zoo_sample.cfg zookeeper-$ZOO_VERSION/conf/zoo.cfg
 
